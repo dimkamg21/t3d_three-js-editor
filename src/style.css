@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index:0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #eeeeee;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.scene_setup, 
+.model, 
+.model_setup,
+.env_setup {
+  padding: 10px;
+}
+
+.scene_models > li {
+  list-style: none;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.model_setup {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.model_setup h3,
+.env_setup h3 {
+  color: #444;
+}
+
+.model_setup div {
+  margin-bottom: 15px;
+}
+
+.model_setup label,
+.env_setup label {
+  display: inline-block;
+  width: 100px;
+  font-size: 14px;
+  color: #777;
+}
+
+.model_setup input[type="number"] {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.model_setup input[type="number"]:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+.model_normalMap label,
+.model_map label,
+.model_envMap label,
+.env_map label {
+  padding-bottom: 10px;
+  width: 200px;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>ThreeJs Editor Clone</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="model">
+        <label for="file">Load model</label>
+        <input id="file" type="file" />
+      </div>
+      <div class="scene_setup">
+        <h3>Scene</h3>
+        <ul class="scene_models">
+          <ul id="no-model">No models yet</ul>
+        </ul>
+      </div>
+
+      <div class="model_setup hidden">
+        <h3 class="model_material">Material</h3>
+        <div class="model_color">
+            <label for="color">Color</label>
+            <input type="color" id="color" name="color" value="#e66465" />
+        </div>
+        <div class="model_opacity">
+            <label for="opacity">Opacity</label>
+            <input type="number" id="opacity" name="opacity" min="0" max="1" step="0.1" value="1.00" />
+        </div>
+        <div class="model_metalness">
+            <label for="metalness">Metalness</label>
+            <input type="number" id="metalness" name="metalness" min="0" max="1" step="0.1" value="1.00" />
+        </div>
+        <div class="model_roughness">
+            <label for="roughness">Roughness</label>
+            <input type="number" id="roughness" name="roughness" min="0" max="1" step="0.1" value="1.00" />
+        </div>
+
+        <div class="model_map">
+          <label for="mapFile">Load map</label>
+          <input id="mapFile" type="file" />
+        </div>
+
+        <div class="model_normalMap">
+          <label for="normalMapFile">Load normal map</label>
+          <input id="normalMapFile" type="file" />
+        </div>
+
+
+        <div class="model_envMap">
+          <label for="model_envMapFile">Load model env map</label>
+          <input id="model_envMapFile" type="file" />
+        </div>
+      </div>
+
+      <div class="env_setup">
+        <h3 class="model_material">Env map</h3>
+
+        <div class="env_map">
+          <label for="envMapFile">Load env map</label>
+          <input id="envMapFile" type="file" multiple />
+        </div>
+      </div>
+    </div>
+
+    <canvas class="webgl"/>
+    <script type="module" src="/src/script.js"></script>
+  </body>
+</html>
